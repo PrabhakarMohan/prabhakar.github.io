@@ -1,0 +1,444 @@
+#menu{
+    z-index:2;
+}
+.menu-col-header{
+    font-size: calc(1rem + 2.4vh);
+    letter-spacing: -.025em;
+    color: #fff;
+    line-height: 135%;
+}
+.menu-link-container {
+    position: relative;
+    font-family: raisonne;
+    font-size: calc(.5rem + 1.6vh);
+    letter-spacing: -.025em;
+    color: #999;
+}
+.menu-link-line {
+    top: calc(100% - 4px);
+    left: 8px;
+    right: 8px;
+    height: 4px;
+}
+.menu-bg-fill{
+    background: url(../media/img/menu/00.jpg) no-repeat;
+    background-size: cover;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+}
+.menu-link {
+    margin: 3.1vh 0 0;
+    line-height:144%;
+}
+.menu-link-txt{
+    margin-bottom: 8px;
+}
+.menu-link-wrap span{
+    font-size: calc(.5rem + 1.6vh) !important;
+}
+.store-bar{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding: 5px 0;
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: 12px;
+    z-index:3;
+    font-family: 'akkurat', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.store-bar a{
+    display:inline;
+}
+
+.store-bar a:hover{
+    text-decoration: underline;
+}
+
+.nav-collapser{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height: 100px;
+    overflow: hidden;
+    transition: top 0.4s ease-out;
+}
+
+.nav-collapser.closed{
+    top: -100px;
+}
+
+body.menu-open .nav-collapser.closed{
+    top: 0;
+}
+
+.nav-background{
+    position: absolute;
+    top:23px;
+    left:0;
+    right:0;
+    height: 82px;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.nav-background.show{
+    opacity: 1;
+}
+
+#nav-logo {
+    opacity: 1 !important;
+    transform: none !important;
+    position:absolute;
+}
+#nav-logo svg{
+    top: 25px;
+}
+#nav-logo-dark{
+    opacity: 0 !important;
+    transition: opacity 0.2s ease;
+}
+#nav-logo-light{
+    opacity: 1 !important;
+    transition: opacity 0.2s ease;
+}
+
+#nav-logo.dark #nav-logo-dark{
+    opacity: 1 !important;
+}
+#nav-logo.dark #nav-logo-light{
+    opacity: 0 !important;
+}
+#nav-logo.force-dark #nav-logo-dark{
+    opacity: 1 !important;
+}
+#nav-logo.force-dark #nav-logo-light{
+    opacity: 0 !important;
+}
+body.menu-open #nav-logo #nav-logo-dark{
+    opacity: 0 !important;
+}
+body.menu-open #nav-logo #nav-logo-light{
+    opacity: 1 !important;
+}
+
+
+#menu-logo {
+    top: 48px;
+}
+
+#nav-bag-wrap{
+    position: absolute;
+    z-index: 4;
+    top: 25px;
+    width:60px;
+    right: 120px;
+    height: 76px;
+    cursor: pointer;
+}
+#nav-bag{
+    position:absolute;
+    top: 25px;
+    width: 22px;
+    left:19px;
+}
+#nav-bag *{
+    fill: #fff !important;
+}
+#nav-bag #bag-fill{
+    opacity: 0;
+    transition: fill 0.2s ease, opacity 0.2s ease !important;
+    fill: #fff !important;
+}
+#nav-bag.dark #bag-fill{
+    fill: #2a2d30 !important;
+}
+#nav-bag.dark *{
+    transition: fill 0.2s ease;
+    fill: #2a2d30 !important;
+}
+
+#nav-bag.force-dark #bag-fill{
+    fill: #2a2d30 !important;
+}
+#nav-bag.force-dark *{
+    transition: fill 0.2s ease;
+    fill: #2a2d30 !important;
+}
+
+body.menu-open #nav-bag *{
+    fill: #fff !important;
+}
+body.menu-open #nav-bag #bag-fill{
+    fill: #fff !important;
+}
+
+#nav-bag-wrap:hover #bag-fill{
+    opacity: 1;
+}
+
+#nav-account-wrap{
+    position: absolute;
+    z-index: 4;
+    top: 25px;
+    width:60px;
+    right: 175px;
+    height: 76px;
+    cursor: pointer;
+}
+#nav-account{
+    position:absolute;
+    top: 25px;
+    width: 22px;
+    left:19px;
+}
+#nav-account *{
+    fill: #fff !important;
+}
+#nav-account #account-fill{
+    opacity: 0;
+    transition: fill 0.2s ease, opacity 0.2s ease !important;
+    fill: #fff !important;
+}
+#nav-account.dark #account-fill{
+    fill: #2a2d30 !important;
+}
+#nav-account.dark *{
+    transition: fill 0.2s ease;
+    fill: #2a2d30 !important;
+}
+
+#nav-account.force-dark #account-fill{
+    fill: #2a2d30 !important;
+}
+#nav-account.force-dark *{
+    transition: fill 0.2s ease;
+    fill: #2a2d30 !important;
+}
+
+body.menu-open #nav-account *{
+    fill: #fff !important;
+}
+body.menu-open #nav-account #account-fill{
+    fill: #fff !important;
+}
+
+#nav-account-wrap:hover #account-fill{
+    opacity: 1;
+}
+
+
+
+#nav-bag.has-items:before{
+    content:"";
+    position:absolute;
+    top:4px;
+    right:1px;
+    width:7px;
+    height:7px;
+    background:red;
+    border-radius: 10px;
+}
+#nav-burger{
+    top:25px;
+    width:60px;
+    right: 60px;
+    position:absolute;
+}
+.nav-burger-line-wrap{
+    left: 14px !important;
+}
+
+.nav-burger-line-over-dark{
+    opacity: 0 !important;
+    transition: opacity 0.2s ease;
+}
+.nav-burger-line-over-light{
+    opacity: 1 !important;
+    transition: opacity 0.2s ease;
+}
+
+#nav-burger.dark .nav-burger-line-over-dark{
+    opacity: 1 !important;
+}
+#nav-burger.dark .nav-burger-line-over-light{
+    opacity: 0 !important;
+}
+
+#nav-burger.force-dark .nav-burger-line-over-dark{
+    opacity: 1 !important;
+}
+#nav-burger.force-dark .nav-burger-line-over-light{
+    opacity: 0 !important;
+}
+
+body.menu-open #nav-burger .nav-burger-line-over-dark{
+    opacity: 0 !important;
+}
+body.menu-open #nav-burger .nav-burger-line-over-light{
+    opacity: 1 !important;
+}
+
+#footer-top{
+    height: 143px;
+}
+
+#footer-top-left-logo{
+    width: 98px
+}
+
+#footer-bottom {
+    justify-content: center;
+    height: 90px;
+}
+#footer-bottom div{
+    font-size: 10px;
+    text-align: center;
+}
+
+#footer-top-right-icons a {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+#footer-top-right {
+    padding: 0 5vw 0 5vw !important;
+}
+
+.footer-middle-center-link {
+    font-size: .9375rem;
+    line-height: 25px;
+}
+
+@media (min-width: 1500px) {
+    #footer-top-left-logo {
+        padding: 0 0 0 4.6vw;
+    }
+}
+
+#mailchimp {
+    background: #212322;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 40%;
+    padding: 40px 0;
+}
+
+#mailchimp-left{
+    width: 35%;
+    padding: 0 0 0 4.6vw;
+}
+#mailchimp-right{
+    width: 45%;
+    padding: 0 4.6vw 0 0;
+}
+
+#mailchimp-txt{
+    color:white;
+    font-size: 48px !important;
+    line-height: 50px;
+    margin-bottom: 25px;
+    position:static;
+    height: auto;
+    max-width:320px;
+}
+
+#mailchimp-copy {
+    line-height: 1.6rem;
+    font-size: 14px;
+    font-family: Akkurat Std Mono,monospace;
+    font-weight: 400;
+    -webkit-font-variant-ligatures: none;
+    font-variant-ligatures: none;
+}
+
+#mailchimp-copy a {
+    display:inline;
+    text-decoration: underline;
+}
+
+#mailchimp-form-wrap {
+    position: static;
+    width: auto;
+    height:auto;
+    display: block;
+}
+
+#mailchimp-form-line{
+    display:none;
+}
+
+#mailchimp-input{
+    border: 2px solid white;
+    height: 50px;
+    position: static;
+    float:left;
+    line-height: 50px;
+    color:white;
+    padding: 0 10px;
+    width: calc(100% - 150px);
+}
+
+@media screen and (min-width: 1000px) {
+    #mailchimp-input {
+        height:52px;
+        line-height: 52px;
+        width: calc(100% - 208px)
+    }
+}
+
+#mailchimp-label{
+    color:white;
+    line-height: 50px;
+    padding-left: 10px;
+    width: calc(100% - 150px);
+}
+
+@media screen and (min-width: 1000px) {
+    #mailchimp-label {
+        line-height:52px;
+        width: calc(100% - 208px);
+        font-size: 18px
+    }
+}
+
+#mailchimp-btn{
+    background: #E74315;
+    color:white;
+    text-align: center;
+    height: 50px;
+    width: 130px;
+    line-height: 50px;
+    font-family: raisonne;
+    text-transform: uppercase;
+    line-height: 50px;
+    font-size: 14px;
+}
+
+
+@media screen and (min-width: 1000px) {
+    #mailchimp-btn {
+        position:absolute;
+        top: 0;
+        right: 0;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 52px;
+        width: 200px;
+        line-height: 52px
+    }
+}
